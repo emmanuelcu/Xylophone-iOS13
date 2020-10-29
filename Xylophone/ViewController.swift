@@ -19,6 +19,12 @@ class ViewController: UIViewController {
 
     @IBAction func keyPressed(_ sender: UIButton) {
              playSound(soundName: sender.currentTitle!)
+//        This line make the button have an oppacity of 0.5
+        sender.alpha = 0.5
+//        Code that run the action with 0.2 delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+            sender.alpha = 1.0
+        }
     }
     
     
